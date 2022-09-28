@@ -2,6 +2,7 @@
     --gross-green: #C0CA33;
     --electric-orange: #FF5F00;
     --beige: #ECEAE4;
+    --black: #000000;
 
     --serif-font-family: "Times New Roman", serif;
     --sans-serif-font-family: "Syne", "Helvetica Neue", sans-serif;
@@ -9,4 +10,73 @@
 
 body {
     font-family: var(--serif-font-family);
+    background-color: var(--gross-green);
+    color: var(--black);
+    padding: 4px;
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 140px;
+}
+
+h1, h2, h3 {
+    font-family: var(--sans-serif-font-family);
+    text-transform: uppercase;
+}
+h1 {
+    font-size: 7.5vw;
+    position: relative;
+    line-height: 1;
+}
+h1::before {
+    content: "Cristina Silva";
+    color: var(--beige);
+    position: absolute;
+    z-index: -1;
+    top: 5px;
+    left: 5px;
+}
+h2 {
+    font-size: 2.5rem;
+}
+header h2 {
+    padding-left: 10px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--black);
+    line-height: 1;
+    margin: 0 -4px 8px;
+    font-size: 4.45vw;
+}
+footer {
+    background-color: var(--black);
+    color: var(--beige);
+    margin: 90px -4px -4px;
+    padding: 100px 4px;
+}
+a {
+    color: var(--electric-orange);
+}
+.header-body {
+    letter-spacing: -0.05rem;
+    font-size: 2rem;
+    line-height: 1.09;
+    font-weight: 300;
+    max-width: 69ch; /* nice */
+    margin-left: 9px;
+}
+.email-cta {
+    color: var(--gross-green);
+    font-size: 22px;
+    margin-bottom: 20px;
+    display: inline-flex;
+}
+footer h2 {
+    margin-bottom: 20px;
+}
+footer p {
+    letter-spacing: -3%;
 }
