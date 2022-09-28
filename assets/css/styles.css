@@ -64,7 +64,6 @@ a {
     letter-spacing: -0.05rem;
     font-size: 2rem;
     line-height: 1.09;
-    font-weight: 300;
     max-width: 69ch; /* nice */
     margin-left: 9px;
 }
@@ -73,6 +72,36 @@ a {
     font-size: 22px;
     margin-bottom: 20px;
     display: inline-flex;
+}
+.tabbed {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: min-content 1fr;
+    column-gap: 24px;
+}
+.tabbed ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.role-list li a {
+    padding: 4px 16px;
+    color: var(--black);
+    border-radius: 10px;
+    font-family: var(--sans-serif-font-family);
+    text-decoration: none;
+    border: 2px solid var(--black);
+    display: inline-flex;
+    font-size: 1.1rem;
+    text-transform: lowercase;
+    font-weight: 700;
+}
+.role-list li a[aria-selected="true"] {
+    background-color: var(--black);
+    color: var(--beige);
+}
+.role-list li a:not(last-child) {
+    margin-bottom: 2.75rem;
 }
 footer h2 {
     margin-bottom: 20px;
