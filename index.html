@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
-    <link rel="icon" href="img/favicon.png" />
+    <link rel="icon" href="favicon.ico" />
     <meta property="og:title" content="" />
     <meta property="og:description" content="" />
     <meta property="og:image" content="" />
@@ -32,9 +32,10 @@
       <p class="header-body">
         I only ever wanted to make MySpace layouts and cute Neopets pages but
         now I've gotta be a <em>UX Engineer</em> and
-        <em>Designer Who Codes</em> to pay the bills. “I work across disciplines
-        to bring digital designs and products to life.” Sometimes I freelance,
-        and sometimes I make
+        <em>Designer Who Codes</em> to pay the bills. I've been known to work
+        across disciplines to bring digital designs and products to life usually
+        by way of <em>design systems</em> and filling in the gaps between design
+        and engineering. Sometimes I freelance, and sometimes I make
         <i><a href="https://www.instagram.com/ohaiclaystina/">ceramics</a></i
         >, but most often you can find me just going about my business in the
         great state of Maine.
@@ -42,17 +43,32 @@
     </header>
     <main>
       <div class="tabbed">
-        <ul class="role-list" role="tablist">
-          <li role="presentation">
-            <a href="#notarize" id="notarize" aria-selected="true">Notarize</a>
-          </li>
-          <li role="presentation">
-            <a href="#freelance" id="freelance">Freelance</a>
-          </li>
-          <li role="presentation">
-            <a href="#bevspot" id="bevspot">BevSpot</a>
-          </li>
-        </ul>
+        <div class="role-column">
+          <img
+            class="current-role-badge"
+            src="assets/img/current-role-badge.svg"
+            alt="Currently at Notarize"
+          />
+          <ul class="role-list" role="tablist">
+            <li role="presentation">
+              <a href="#notarize" id="notarize" aria-selected="true"
+                >Notarize</a
+              >
+            </li>
+            <li role="presentation">
+              <a href="#freelance" id="freelance">Freelance</a>
+            </li>
+            <li role="presentation">
+              <a href="#bevspot" id="bevspot">BevSpot</a>
+            </li>
+            <li role="presentation">
+              <a href="#northeastern" id="bevspot"
+                >Northeastern<br />
+                University</a
+              >
+            </li>
+          </ul>
+        </div>
 
         <div class="role-content">
           <h2>Experience</h2>
@@ -76,6 +92,13 @@
             aria-labelledby="bevspot"
           >
             I used to work at bevspot!
+          </section>
+          <section
+            role="tabpanel"
+            id="bevspot-section"
+            aria-labelledby="bevspot"
+          >
+            I used to teach at Northeastern!
           </section>
         </div>
       </div>
