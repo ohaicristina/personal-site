@@ -42,7 +42,21 @@ h1::before {
     left: 5px;
 }
 h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    margin-bottom: 2.25rem;
+}
+h3 {
+    font-size: 1.375rem;
+    line-height: 1.2;
+    font-family: var(--serif-font-family);
+    text-transform: none;
+    font-weight: 400;
+    letter-spacing: -0.04rem;
+}
+h4 {
+    font-size: 0.875rem;
+    font-family: var(--sans-serif-font-family);
+    font-weight: 600;
 }
 header h2 {
     padding-left: 10px;
@@ -60,6 +74,17 @@ footer {
 }
 a {
     color: var(--electric-orange);
+}
+a:focus-visible {
+    outline: 2px dotted currentColor;
+    outline-offset: 2px;
+}
+section {
+    position: relative;
+}
+section:focus-visible {
+    outline: 4px dotted currentColor;
+    outline-offset: 12px;
 }
 .header-body {
     letter-spacing: -0.05rem;
@@ -79,6 +104,7 @@ a {
     grid-template-rows: 1fr;
     grid-template-columns: max-content 1fr;
     column-gap: 60px;
+    max-width: 1000px;
 }
 .tabbed ul {
     list-style: none;
@@ -89,10 +115,6 @@ a {
     display: flex;
     align-items: flex-start;
     gap: 20px;
-}
-.role-column img {
-    margin-top: -28px;
-    animation: rotate 18s infinite linear;
 }
 .role-list li a {
     padding: 4px 16px;
@@ -120,13 +142,30 @@ a {
     margin-bottom: 2.5rem;
 }
 .role-content {
-    margin-top: -16px;
+    position: relative;
+}
+.role-header {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center; 
+}
+.current-role-badge {
+    animation: rotate 18s infinite linear;
+    width: 75px;
+    height: 75px;
+    position: relative;
+    left: -12px;
+}
+.role-content p {
+    max-width: 60ch;
+    letter-spacing: -0.035rem;
+    font-size: 1rem;
 }
 footer h2 {
     margin-bottom: 20px;
 }
 footer p {
-    letter-spacing: -3%;
+    letter-spacing: -0.035rem;
 }
 
 @keyframes rotate {
