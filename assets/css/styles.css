@@ -12,7 +12,6 @@ body {
     font-family: var(--serif-font-family);
     background-color: var(--gross-green);
     color: var(--black);
-    padding: 0.25rem;
 }
 
 header {
@@ -59,7 +58,7 @@ h4 {
     font-weight: 600;
 }
 header h2 {
-    padding-left: 1.6rem;
+    padding-left: 0.5rem;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid var(--black);
     line-height: 1;
@@ -67,14 +66,14 @@ header h2 {
     font-size: 4.45vw;
 }
 main { 
-    min-height: 100vh; 
+    min-height: 100vh;
     margin-left: 0.5rem;
 }
 footer {
     background-color: var(--black);
     color: var(--beige);
-    margin: 5rem -0.25rem -0.25rem;
-    padding: 6.25rem 0.25rem;
+    margin-top: 5rem;
+    padding: 6.25rem 0.5rem;
 }
 a {
     color: var(--electric-orange);
