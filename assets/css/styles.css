@@ -7,6 +7,15 @@
     --serif-font-family: "Times New Roman", serif;
     --sans-serif-font-family: "Syne", "Helvetica Neue", sans-serif;
 }
+html {
+    font-size: 14px;
+}
+
+@media screen and (min-width: 768px) {
+    html {
+        font-size: unset;
+    }
+}
 
 body {
     font-family: var(--serif-font-family);
@@ -103,34 +112,64 @@ section:focus-visible {
     display: inline-flex;
 }
 .tabbed {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: max-content 1fr;
-    column-gap: 60px;
     max-width: 1000px;
 }
+
+@media screen and (min-width: 767px) {
+    .tabbed {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: max-content 1fr;
+        column-gap: 60px;
+    }
+}
+
 .tabbed ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
+
 .role-column {
     display: flex;
     align-items: flex-start;
     gap: 20px;
 }
+@media screen and (max-width: 767px) {
+    .tabbed ul.role-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+    }
+}
+.role-list li {
+    border: 2px solid var(--black);
+    flex: 1;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+@media screen and (min-width: 768px) {
+    .role-list li {
+        border-radius: 10px;
+    }
+}
 .role-list li a {
     padding: 4px 16px;
     color: var(--black);
-    border-radius: 10px;
     font-family: var(--sans-serif-font-family);
     text-decoration: none;
-    border: 2px solid var(--black);
-    display: inline-flex;
     font-size: 1.1rem;
     text-transform: lowercase;
     font-weight: 700;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    text-align: center;
+    flex: 1;
+}
+@media screen and (min-width: 768px) {
+    .role-list li a {
+        display: inline-flex;
+        text-align: left;
+    }
 }
 .role-list li a:focus {
     outline: 2px solid var(--black);
@@ -141,8 +180,11 @@ section:focus-visible {
     background-color: var(--black);
     color: var(--beige);
 }
-.role-list li a:not(last-child) {
-    margin-bottom: 2.5rem;
+
+@media screen and (min-width: 768px) {
+    .role-list li:not(:last-child) {
+        margin-bottom: 2.5rem;
+    }
 }
 .role-content {
     position: relative;
